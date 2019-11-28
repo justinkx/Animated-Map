@@ -1,0 +1,49 @@
+body {
+	overflow: hidden;
+	background-color: black;
+	background: linear-gradient(to bottom, black 0%, #2f3a3d 100%);
+	height: 100vh;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-family: 'museo_sans700', sans-serif;
+	color: rgb(255, 255, 255);
+	-webkit-font-smoothing: antialiased;
+}
+@keyframes slideacross {
+	0% {
+		-webkit-transform: translateX(-1439px);
+	}
+	100% {
+		-webkit-transform: translateX(0px);
+	}
+}
+.map {
+	position: absolute;
+	top: -100px;
+	bottom: 0;
+	left: 0px;
+	right: -1439px;
+	background-image: url('./map.svg');
+	background-repeat: repeat-x;
+	background-size: 55%;
+	opacity: 0.1;
+	animation-name: slideacross;
+	animation-duration: 86.4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.title {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.title > p {
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}
